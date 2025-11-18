@@ -105,7 +105,7 @@ int filaVazia(Fila *f) {
     return f->quantidade == 0;
 }
 
-// Gera uma peça com tipo aleatório
+// Gera uma peça com tipo aleatório, sem necessitar da biblioteca randômica
 Peca gerarPeca(int id) {
     char tipos[] = {'I', 'O', 'T', 'L'};
     Peca nova;
@@ -123,7 +123,7 @@ void enqueue(Fila *f, Peca nova) {
     }
 }
 
-// Remove peça da frente da fila
+// Removendo peça da frente da fila
 Peca dequeue(Fila *f) {
     Peca removida = {'X', -1}; // Caso erro
     if (!filaVazia(f)) {
@@ -134,7 +134,7 @@ Peca dequeue(Fila *f) {
     return removida;
 }
 
-// Exibe fila completa
+// Exibindo fila completa
 void exibirFila(Fila *f) {
     printf("\nFila de peças:\n");
     if (filaVazia(f)) {
